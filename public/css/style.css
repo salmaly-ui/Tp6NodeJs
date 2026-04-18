@@ -1,0 +1,268 @@
+/* Variables et reset */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --danger-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --warning-gradient: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  --bg-light: #f8f9fc;
+  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+  --hover-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  background: linear-gradient(145deg, #f3f4f6 0%, #e5e7eb 100%);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
+
+/* Navbar améliorée */
+.navbar {
+  background: var(--primary-gradient) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #fff, #e0e7ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+.nav-link {
+  font-weight: 500;
+  margin: 0 0.5rem;
+  transition: all 0.2s ease;
+  border-radius: 50px;
+  padding: 0.5rem 1rem !important;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Cartes produits */
+.card {
+  border: none;
+  border-radius: 1.25rem;
+  background: white;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--hover-shadow);
+}
+
+.card-header {
+  background: rgba(0, 0, 0, 0.02);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  padding: 0.8rem 1.25rem;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #4f46e5 !important;
+}
+
+.card-text {
+  color: #4b5563;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+/* Badges */
+.badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+.badge.bg-success {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+}
+
+.badge.bg-danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+}
+
+.badge.bg-info {
+  background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  background: #eef2ff;
+  color: #4338ca;
+  border-radius: 2rem;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-right: 0.4rem;
+  margin-bottom: 0.4rem;
+  transition: all 0.2s;
+}
+
+.tag:hover {
+  background: #c7d2fe;
+  transform: scale(1.02);
+}
+
+/* Boutons */
+.btn {
+  border-radius: 2rem;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  background-size: 200% auto;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+}
+
+.btn-outline-primary {
+  border: 1px solid #c7d2fe;
+  background: transparent;
+  color: #4f46e5;
+}
+
+.btn-outline-primary:hover {
+  background: #4f46e5;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Formulaires */
+.form-control, .form-select {
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  padding: 0.6rem 1rem;
+  transition: all 0.2s;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.2);
+}
+
+/* Filtres */
+.card-filter {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: var(--card-shadow);
+  border: none;
+  margin-bottom: 2rem;
+}
+
+/* Pagination */
+.pagination .page-link {
+  border-radius: 2rem !important;
+  margin: 0 0.2rem;
+  border: none;
+  background: white;
+  color: #4f46e5;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.pagination .page-link:hover {
+  background: #eef2ff;
+  transform: translateY(-2px);
+}
+
+.pagination .active .page-link {
+  background: var(--primary-gradient);
+  color: white;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+}
+
+/* Image produit */
+.product-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .product-img {
+  transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+  background: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  color: #6b7280;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card, .card-filter {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1.1rem;
+  }
+  .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+}
