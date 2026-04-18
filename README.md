@@ -21,7 +21,10 @@ Application web permettant de gérer des produits (Créer, Lire, Modifier, Suppr
 🔗 Vidéo :
 
 
-https://github.com/user-attachments/assets/c10b01cf-3f16-43cb-85f5-15f80e68ae78
+
+
+https://github.com/user-attachments/assets/76615874-0f99-4755-a9fe-cd2460d94196
+
 
 
 ---
